@@ -1,0 +1,74 @@
+Exception Test:
+
+Q1. What is the knowledge point of the test? Where is the offical document to the knowledge point?
+A1. Usage of Exception in Java. https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html
+
+Q2. Why the test failed at first?
+A2. Because the default output is not the expected test result, some are null and some are empty
+
+Q3. Why you corrected the test that way?
+A3.
+StackFrameHelper: Use Stacktrace to get the caller method name and class name, concat to get the whole method name
+StringFormatException: Use super method to get the caller's thrown exception message
+Exception Test: Just filled in the expected result
+
+
+Q4. Do you have further questions on this knowledge point?
+A4. No.
+
+==========================================================================
+
+Inheritance Test:
+
+Q1. What is the knowledge point of the test? Where is the offical document to the knowledge point?
+A1. Learning Java Object inheritance basic concept. https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html
+
+Q2. Why the test failed at first?
+A2. Because the default output is not the expected test result, some are null and some are empty
+
+Q3. Why you corrected the test that way?
+A3.
+should_be_derived_from_object_class(): simply get the object class
+should_call_super_class_constructor(): goes into util to see what to return by the constructor, which SuperClassWithDefaultConstructor will return log first since DerivedFromSuperClassWithDefaultConstructor inherit it
+should_call_super_class_constructor_continued(): check class in util to get result
+should_call_super_class_constructor_more(): check class in util to get result
+should_call_most_derived_methods(): check class in util to get result
+should_call_super_class_methods(): check class in util to get result
+should_use_caution_when_dealing_with_array_type(): check class in util to determine throw exception
+should_not_make_you_confused(): Still NestedDerivedClassWithName.getName although the Type is DerivedFromBaseClassWithName
+should_not_make_you_confused_2(): derived.getName() could be found in the parent class
+should_use_instance_of_to_determine_inheritance_relationship(): parent child relationship
+should_use_instance_of_only_in_inheritance_relationship(): Should be integer object
+Person_For_Equal: Just check equals and return generates hash code, nothing special
+
+
+Q4. Do you have further questions on this knowledge point?
+A4. No.
+
+==============================================================================
+
+Object Test:
+
+Q1. What is the knowledge point of the test? Where is the offical document to the knowledge point?
+A1. Learning Java Object inheritance basic concept. https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html
+
+Q2. Why the test failed at first?
+A2. Because the default output is not the expected test result, some are null and some are empty
+
+Q3. Why you corrected the test that way?
+A3.
+should_point_to_the_same_object(): Same Object
+should_point_to_different_object(): different object
+should_initialized_to_default_value(): nothing is explicitly initialized, therefore expected to be null or zero
+should_pass_by_value(): only pass by value not by reference
+should_pass_by_value_continued(): only pass by value not by reference
+should_modify_internal_state(): check for the return value for tryingToUpdateState
+should_choose_method_at_compile_time(): Check OverloadingFixture for return value
+should_choose_the_most_specific_overload(): Check OverloadingFixture for return value
+should_calling_another_constructor(): Check CallingAnotherCtor for return value
+should_get_initialization_ordering(): Check InitializationOrderClass for return value
+should_get_message_of_var_length_parameters(): Check getMessageOfVarLengthParameters for return value
+should_get_message_of_var_length_parameters_2(): Check getMessageOfVarLengthParameters for return value
+
+Q4. Do you have further questions on this knowledge point?
+A4. No.
